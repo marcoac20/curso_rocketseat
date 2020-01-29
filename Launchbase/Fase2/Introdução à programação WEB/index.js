@@ -19,3 +19,6 @@ if (media>5) {
 } else {
     console.log('A média foi menor que 5')
 }
+
+
+
