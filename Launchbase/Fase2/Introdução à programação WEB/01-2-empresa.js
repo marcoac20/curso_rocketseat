@@ -3,8 +3,8 @@
 // Desafios para fortalecer os conhecimentos obtidos até aqui.
 
 // Construção e impressão de objetos
-// Crie um programa que armazena dados da empresa Rocketseat dentro de um objeto chamado empresa. Os dados a serem armazenados são:
-
+// Crie um programa que armazena dados da empresa Rocketseat dentro de um objeto chamado empresa. 
+//Os dados a serem armazenados são:
 // Nome:
 // Cor: 
 // Foco: 
@@ -14,10 +14,11 @@
 // Obs.: Para armazenar os dados de endereço da empresa você pode criar objetos intercalados:
 
 const empresa = {
-    nome = 'Rocketseat',
-    cor = 'Roxo',
-    endereço ={
-        rua: Rua Guilherme Gembala,
+    nome: 'Rocketseat',
+    cor: 'Roxo',
+    foco: 'Programação',
+    endereco: {
+        rua: 'Rua Guilherme Gembala',
         numero: 260
     }
 }
@@ -27,6 +28,6 @@ const empresa = {
 // A empresa Rocketseat está localizada em Rua Guilherme Gembala, 260
 // Obs. Para imprimir em tela utilize o formato de template strings
 
-console.log (`A empresa ${empresa} está localizada em ${endereço}`)
+console.log (`A empresa ${empresa.nome} está localizada em ${empresa.endereco.rua}, ${empresa.endereco.numero}`)
 
 
