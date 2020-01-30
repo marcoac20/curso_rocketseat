@@ -10,7 +10,7 @@ const user = {
 function criarTransacao(transacao) {
   user.transactions.push(transacao)
 
-  if (transacao.tipo == 'creditoo') {
+  if (transacao.tipo == 'credito') {
     user.balance = user.balance + transacao.valor
   } else {
     user.balance = user.balance - transacao.valor
@@ -60,7 +60,6 @@ function numeroDeTransacao() {
 
   return contar
 }
-
 
 criarTransacao({ tipo: 'credito', valor: 50 })
 criarTransacao({ tipo: 'credito', valor: 120 })
