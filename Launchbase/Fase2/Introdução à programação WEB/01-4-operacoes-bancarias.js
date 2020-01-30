@@ -7,7 +7,7 @@ const user = {
 }
 
 //Adicionar transações
-function criarTrasacao(transacao) {
+function criarTransacao(transacao) {
   user.transactions.push(transacao)
 
   if (transacao.tipo == 'creditoo') {
@@ -62,10 +62,10 @@ function numeroDeTransacao() {
 }
 
 
-criarTrasacao({ tipo: 'credito', valor: 50 })
-criarTrasacao({ tipo: 'credito', valor: 120 })
-criarTrasacao({ tipo: 'debito', valor: 80 })
-criarTrasacao({ tipo: 'debito', valor: 30 })
+criarTransacao({ tipo: 'credito', valor: 50 })
+criarTransacao({ tipo: 'credito', valor: 120 })
+criarTransacao({ tipo: 'debito', valor: 80 })
+criarTransacao({ tipo: 'debito', valor: 30 })
 
 console.log(user)
 console.log(maiorTransacaoPorTipo('credito'))
