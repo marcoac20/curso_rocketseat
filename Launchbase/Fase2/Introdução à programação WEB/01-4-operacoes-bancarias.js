@@ -7,10 +7,10 @@ const user = {
 }
 
 //Adicionar transações
-function criarTrasacao(transacao){
+function criarTrasacao(transacao) {
   user.transactions.push(transacao)
 
-  if (transacao.tipo == 'creditoo'){
+  if (transacao.tipo == 'creditoo') {
     user.balance = user.balance + transacao.valor
   } else {
     user.balance = user.balance - transacao.valor
@@ -20,12 +20,12 @@ function criarTrasacao(transacao){
 }
 
 //Relatórios
-function maiorTransacaoPorTipo (tipo){
+function maiorTransacaoPorTipo(tipo) {
   let maiorTransacao
   let maiorValor = 0
 
-  for (let transacao of user.transactions){
-    if(transacao.tipo == tipo && transacao.valor > maiorValor){
+  for (let transacao of user.transactions) {
+    if (transacao.tipo == tipo && transacao.valor > maiorValor) {
       maiorTransacao = transacao
       maiorValor = transacao.valor
     }
@@ -34,13 +34,13 @@ function maiorTransacaoPorTipo (tipo){
   return maiorTransacao
 }
 
-function mediaValorTransacao(){
+function mediaValorTransacao() {
   let soma = 0
 
-  for (transacao of user.transactions){
+  for (transacao of user.transactions) {
     soma = soma + transacao.valor
   }
-  
+
   return soma / user.transactions.length
 }
 
@@ -50,8 +50,8 @@ function numeroDeTransacao() {
     debito: 0
   }
 
-  for (let transacao of user.transactions){
-    if (transacao.tipo == 'credito'){
+  for (let transacao of user.transactions) {
+    if (transacao.tipo == 'credito') {
       contar.credito++
     } else {
       contar.debito++
