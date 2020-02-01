@@ -2,7 +2,7 @@
 
 /*Declarando variavel no CSS*/
 :root{
-    --color-green: #50fa7b;
+    --color-green: #0926c9;
 }
 
 * {
@@ -75,7 +75,8 @@ body{
     }
 
     #links-footer a{
-        text-decoration: none;
+        /*text-decoration: underline; /*Decorar o  texto com _*/
+        border-bottom: 1px solid var(--color-green);
 
     }
 
