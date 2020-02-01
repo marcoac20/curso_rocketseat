@@ -1,7 +1,8 @@
 @import "https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,700&display=swap";
 
+/*Declarando variavel no CSS*/
 :root{
-    --coolor-green: #50fa7b;
+    --color-green: #50fa7b;
 }
 
 * {
@@ -19,24 +20,24 @@ body{
         border-bottom: 1px solid #333;
         background: rgba(0,0,0,0.1);
     }
-    header div {
+    .links {
         text-align: center;
     }
-    header div a {
+    .links a {
         color: white;
         font-size: 18px;
-        line-height: 28px;
+        line-height: 28px; /*espaçamento entre as linhas de um texto*/
         margin: 0 16px;
         text-decoration: none;
     }
-    header div a:hover {
-        color: var(--coolor-green);
+    .links a:hover {
+        color: var(--color-green);
         transition: color 300ms;
     }
 
     /*tratando o id = wrapper *id - não pode ser igual*/
     #wrapper {
-        text-align: center;
+        text-align: center; /*Alinhar texto*/
         padding: 32px;
     }
 
@@ -44,6 +45,7 @@ body{
         border-radius: 50%; /*arrendondar as bordas da imagem*/
         border: 5px solid var(--color-green);
         margin-bottom: 32px;
+        height: 300px; /*altura da imagem*/
     }
 
     #wrapper h1 {
@@ -68,7 +70,12 @@ body{
     }
 
     #wrapper p a {
-        color: var(--coolor-green);
+        color: var(--color-green);
+
+    }
+
+    #links-footer a{
+        text-decoration: none;
 
     }
 
