@@ -3,6 +3,7 @@
 /*Declarando variavel no CSS*/
 :root{
     --color-green: #50fa7b;
+    --color-rocket: #7159c1;
 }
 
 * {
@@ -81,3 +82,81 @@ body{
     }
 
 
+    /*=== CARDS ===*/
+.cards {
+    max-width: 800px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px; /*espaçamento entre as colunas*/
+}
+
+.card {
+    background-color: var(--color-rocket);
+}
+
+.card__image-container img {
+    width: 100%;
+}
+
+.card__content,
+.card__info {
+    padding: 24px;
+}
+
+.card__info {
+    display: grid; /*criar tebela*/
+    grid-template-columns: 1fr 1fr; /*numero de colunas da tabela, fr=flexivel ao tamanho*/
+}
+
+.card__price {
+    background-color: var(--color-rocket);
+    filter: brightness(90%);
+    padding: 5px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+
+/*=== Modal ===*/
+
+.modal-overlay {
+    background-color: rgba(0,0,0,0.7);
+    width: 100%;
+    height: 100%;
+    position: fixed; /*fixar na tela*/ 
+    top: 0px;
+    opacity: 0;
+    visibility: hidden; /*visibilidade*/ 
+}
+
+.modal {
+    background-color: white;
+    width: 90%;
+    height: 90%;
+    margin: 5vh auto; /*vh = visão da altura*/
+    position: relative; /*posição relativa*/
+}
+
+.close-modal {
+    color: black;
+    position: absolute; /* fica na posição absoluta relativa ao pai*/
+    right: 8px;
+    top: 8px;
+    cursor: pointer; /*alterar o cursor*/
+}
+
+
+/*=== Modal Ativo ===*/
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+iframe {
+    width: 100%;
+    height: 90%;
+    position: absolute;
+    top: 5%;
+}
