@@ -1,0 +1,3 @@
+npm init -y - cria o arquivo json na pasta do projeto
+npm install express - instala as dependencias do express na pasta do projeto
+npm install -D nodemon - istala a dependedencia do nodemon para atualizar o servidor automaticamente
