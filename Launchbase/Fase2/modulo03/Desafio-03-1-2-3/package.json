@@ -1,7 +1,6 @@
 {
   "name": "desafio03",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "nodemon server.js"
@@ -11,6 +10,11 @@
     "nunjucks": "^3.2.0"
   },
   "devDependencies": {
+    "nodemon": "^2.0.2",
     "nodmem": "^2.0.2"
-  }
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": ""
 }
