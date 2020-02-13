@@ -1,3 +1,12 @@
+Configurar servidor
+
 npm init -y - cria o arquivo json na pasta do projeto
 npm install express - instala as dependencias do express na pasta do projeto
 npm install -D nodemon - istala a dependedencia do nodemon para atualizar o servidor automaticamente
+npm install nunjucks - 
+    - Mudar a extensão .html para njk
+    - Instalar a instensão Nunjucks Template
+    - Abrir o " Open Settings (JSON) e incluir o coidgo abaixo: 
+        "emmet.includeLanguages": {
+        "njk": "html"
+        },  
