@@ -8,50 +8,22 @@
 
     <section class="cards">
 
-        <div class="card" id="starter">
-            <div class="card__image">
-                <img src="/starter.svg" alt="Starter">
-            </div>
+        {% for item in itens%}
+            <div class="card" id="{{ item.id }}">
+                <div class="card__image">
+                    <img src="{{ item.card_img }}" alt="{{ item.title }}">
+                </div>
 
-            <div class="card__content">
-                <p>Starter</p>
-            </div>
+                <div class="card__content">
+                    <p>{{ item.title }}</p>
+                </div>
 
-            <div class="card__info">
-                <p>5 Modúlos</p>
-                <p class="card__price">Free</p>
+                <div class="card__info">
+                    <p>5 {{ item.modulos }}</p>
+                    <p class="card__price">{{ item.price }}</p>
+                </div>
             </div>
-        </div>
-
-        <div class="card" id="launchbase">
-            <div class="card__image">
-                <img src="/launchbase.svg" alt="launchbase">
-            </div>
-
-            <div class="card__content">
-                <p>LancheBase</p>
-            </div>
-
-            <div class="card__info">
-                <p>11 Modúlos</p>
-                <p class="card__price">Pago</p>
-            </div>
-        </div>
-
-        <div class="card" id="gostack">
-            <div class="card__image">
-                <img src="gostack.svg" alt="/gostack">
-            </div>
-
-            <div class="card__content">
-                <p>GoStack</p>
-            </div>
-
-            <div class="card__info">
-                <p>5 Modúlos</p>
-                <p class="card__price">pago</p>
-            </div>
-        </div>
+        {% endfor %}
 
     </section>
 
