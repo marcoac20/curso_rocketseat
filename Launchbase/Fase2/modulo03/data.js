@@ -20,7 +20,7 @@ module.exports = [
         title: "Podcast FalaDev #12 - Boas práticas no front-end, técnicas e estratégias",
         duretion:"37 min",
         price:"Free",
-        featured: true,
+        featured: true
     },
 
     {
