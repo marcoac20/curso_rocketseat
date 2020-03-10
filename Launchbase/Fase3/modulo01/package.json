@@ -4,8 +4,7 @@
   "main": "server.js",
   "scripts": {
     "start": "",
-    "nodemon": "nodemon server.js",
-    "browsersync": "browser-sync start --proxy",
+    "nodemon": "nodemon server.js"
   },
   "dependencies": {
     "express": "^4.17.1",
