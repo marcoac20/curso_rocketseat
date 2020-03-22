@@ -3,3 +3,8 @@ npm-run-all - para rodar diversos serviços
 -D - Instalar como desenvolvimento
     'npm install browser-sync npm-run-all -D'
     
+
+
+- packege.json
+"start": "npm-run-all -p nodemon browsersync", /*-p = rodar aplicação em paralelo*/
+"browsersync": "browser-sync start --proxy http://localhost:5000 -- 'public,views'" /*proxy =  antes de chegar no servidor ele precisa observar as pastas escolhidas*/
