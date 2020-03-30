@@ -30,7 +30,7 @@ header {
 
 .links a + a {
     margin-left: 32px;
-    
+
 }
 
 .links a {
@@ -149,7 +149,7 @@ header {
 
 input {
     width: 100%;
-    outline: none;
+    outline: n    one;
     color: #555;
     font-weight: bold;
     font-size: 18px;
