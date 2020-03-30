@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = express.Router()
+const instructors = require('./intructors')
 
 routes.get('/', function(req, res){
     return res.redirect("/instructors")
@@ -13,10 +14,7 @@ routes.get('/instructors/create', function(req, res){
     return res.render("instructors/create")
 })
 
-routes.post('/instructors', function(req, res){
-
-    return res.send(req.body) /* req.body = mantém parâmetros enviados do cliente como parte de uma solicitação POST. */
-})
+routes.post('/instructors', instructors.post)
 
 routes.get('/members', function(req, res){
     return res.render("members")
