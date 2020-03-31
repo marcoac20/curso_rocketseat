@@ -17,14 +17,22 @@ exports.post = function(req, res){
   let { avatar_url, birth, name, services, gender } = req.body
 
   //trtando e incluinda data desde
-  req.body.birth = Date.parse(req.body.birth)
-  req.body.created_at = Date.now()
+  req.body.birth = Date.parse(birth)
+  const created_at = Date.now()
 
   //criando ID
-  req.body.id = Number(data.instructors.length + 1)
+  const id = Number(data.instructors.length + 1)
 
   //Criando arquivo de dados json
-  data.instructors.push(req.body)
+  data.instructors.push({
+    id,
+    avatar_url,
+    name,
+    birth,
+    gender,
+    services,
+    created_at,
+  })
 
   fs.writeFile("data.json", JSON.stringify(data, null, 2), function(err){
     if (err) return res.send("Erro ao enviar dados!")
