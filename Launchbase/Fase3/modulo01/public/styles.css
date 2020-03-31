@@ -149,7 +149,7 @@ header {
 
 input {
     width: 100%;
-    outline: n    one;
+    outline: none;
     color: #555;
     font-weight: bold;
     font-size: 18px;

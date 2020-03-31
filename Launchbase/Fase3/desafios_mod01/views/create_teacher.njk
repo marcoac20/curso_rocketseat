@@ -1,0 +1,68 @@
+{% extends "layout.njk" %}
+
+{% block content %}
+<form class="card_teacher" method="POST" action="/teachers">
+    <section
+        class="avatar"
+        style="background: url(https://source.unsplash.com/collection/9540099/500x500) no-repeat center center / cover">
+    </section>
+    <section class="details">
+
+        <h3>Novo Professor</h3>
+
+        <div class="item">
+            <div>Avatar URL</div>
+            <div>
+                <input type="url" name="avatar_url" placeholder="http://">
+            </div>
+        </div>
+
+
+        <div class="item">
+            <div>Professor</div>
+            <div>
+                <input type="text" name="name" placeholder="Nome do Professor">
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Data de nascimento</div>
+            <div>
+                <input type="date" name="birth">
+            </div>
+        </div>
+
+        <div class="item">
+          <div>Grau de escolaridade</div>
+          <div>
+            <select name="select">
+              <option value="" selected>Escolha uma opção</option>
+              <option value="Ensino Médio Completo">Ensino Médio Completo</option>
+              <option value="Ensino Superior Completo">Ensino Superior Completo</option>
+              <option value="Mestrado">Mestrado</option>
+              <option value="Doutorado">Doutorado</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="item">
+            <div>Sexo</div>
+            <div>
+                <span><input type="radio" name="gender" value="P"> Presencial</span>
+                <span><input type="radio" name="gender" value="AED"> À distância</span>
+            </div>
+        </div>
+
+        <div class="item">
+            <div>Area de atuação</div>
+            <div>
+                <input type="text" name="services" placeholder="Separe os serviços prestados por virgula">
+            </div>
+        </div>
+
+        <button type="submit">Salvar</button>
+
+    </section>
+</form>
+
+{% endblock content %}

@@ -1,5 +1,6 @@
 const express = require('express')
 const routes = express.Router()
+const teachers = require('./teachers')
 
 const videos = require("./data")
 
@@ -29,7 +30,7 @@ routes.get("/video", function(req, res){
 
     const video = videos.find(function(video){
         return video.id == id
-        
+
     })
 
     if (!video) {
@@ -43,5 +44,11 @@ routes.get('/teachers', function(req, res){
     return res.render("teachers")
 })
 
+
+routes.get('/teachers/create', function(req, res){
+  return res.render("create_teacher")
+})
+
+routes.post('/teachers', teachers.post)
 
 module.exports = routes

@@ -17,7 +17,7 @@ exports.post = function(req, res){
   let { avatar_url, birth, name, services, gender } = req.body
 
   //trtando e incluinda data desde
-  req.body.birth = Date.parse(birth)
+  birth = Date.parse(birth)
   const created_at = Date.now()
 
   //criando ID
