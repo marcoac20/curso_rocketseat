@@ -10,19 +10,22 @@
     margin: 0;
     padding: 0;
     border: none;
+    box-sizing: border-box;
 }
+
 body{
     background: #282a36;
     font-family: 'Roboto', sans-serif;
     color: white;
 }
+
 header, #links-footer {
     padding: 32px;
     border-bottom: 1px solid #333;
     background: rgba(0,0,0,0.1);
     text-align: center;
-    box-sizing: border-box;
 }
+
 .links {
     font-size: 22px;
 }
@@ -138,53 +141,7 @@ header, #links-footer {
     text-align: center;
 }
 
-
-/*=== Modal ===*/
-
-.modal-overlay {
-    background-color: rgba(0,0,0,0.7);
-    width: 100%;
-    height: 100%;
-    position: fixed; /*fixar na tela*/ 
-    top: 0px;
-    opacity: 0;
-    visibility: hidden; /*visibilidade*/ 
-}
-
-.modal {
-    background-color: white;
-    width: 90%;
-    height: 90%;
-    margin: 5vh auto; /*vh = visão da altura*/
-    position: relative; /*posição relativa*/
-}
-
-.close-modal {
-    color: black;
-    position: absolute; /* fica na posição absoluta relativa ao pai*/
-    right: 8px;
-    top: 8px;
-    cursor: pointer; /*alterar o cursor*/
-}
-
-
-/*=== Modal Ativo ===*/
-
-.modal-overlay.active {
-    opacity: 1;
-    visibility: visible;
-}
-
-iframe {
-    width: 100%;
-    height: 90%;
-    position: absolute;
-    top: 5%;
-}
-
-
 /* === FEATURED === */
-
 .featured-wrapper.card__image-container {
     position: relative;
 }
@@ -265,9 +222,9 @@ iframe {
     padding: 16px 0;
 }
 
-.details .item:first-child { /* :first-child = define o primeiro elemento, nesse caso border none*/
-    border: none;
-}
+ /* .details.item:first-child { :first-child = define o primeiro elemento, nesse caso border none */
+    /* border: none;
+} */
 
 .details h3,
 .details .item div:nth-child(1) { /* div:nth-child(1) = pega a primeira div */
@@ -294,7 +251,7 @@ iframe {
     padding: 8px 16px;
     background-color: #f7d05f;
     border-radius: 16px;
-    color: white;
+    color: black;
     margin-right: 4px;
     margin-top: 8px;
     display: inline-block;

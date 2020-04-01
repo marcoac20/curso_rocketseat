@@ -24,12 +24,13 @@
         
         {% endblock %}
 
-        <div id="links-footer" class="links">
-            {% for links in about.link %}
-                <a href="{{ links.url }}" target="_blank">{{ links.name  }}</a>
-            {% endfor %}
-        </div>  
-
+        <footer>
+            <div id="links-footer" class="links">
+                {% for links in about.link %}
+                    <a href="{{ links.url }}" target="_blank">{{ links.name  }}</a>
+                {% endfor %}
+            </div>  
+        </footer>
     </body>    
 
 </html> 
