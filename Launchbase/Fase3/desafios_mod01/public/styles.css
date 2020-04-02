@@ -200,7 +200,7 @@ footer {
   grid-template-columns: 0.4fr 0.6fr;
 
   /* sombra */
-  box-shadow: 10px 20px 30px 5px rgba(0, 0, 0, 0.5);
+  box-shadow: 10px 20px 30px 5px rgba(0, 0, 0, 0.6);
 
   /* animation */
   animation: up 400ms ease-in-out;
