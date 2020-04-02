@@ -6,11 +6,19 @@
 
 {% block content %}
 
-        <div id="wrapper">
-            <img src="{{ about.avatarUrl }}" alt="Imagem de {{ about.name }}">
-            <h1>{{ about.name }}</h1>
-            <h2>{{ about.role }}</h2>
-            <p>{{ about.description }}</p> <!-- target="_blank" - serve para abrir em outra aba -->
-        </div>
+  <div id="wrapper">
+      <img src="{{ about.avatarUrl }}" alt="Imagem de {{ about.name }}">
+      <h1>{{ about.name }}</h1>
+      <h2>{{ about.role }}</h2>
+      <p>{{ about.description }}</p> <!-- target="_blank" - serve para abrir em outra aba -->
+  </div>
+
+  <footer>
+    <div class="links">
+      {% for links in about.link %}
+          <a href="{{ links.url }}" target="_blank">{{ links.name  }}</a>
+      {% endfor %}
+    </div>
+  </footer>
 
 {% endblock %}

@@ -2,8 +2,8 @@
 
 {% block content %}
 <div class="card_teacher">
-    <section 
-        class="avatar" 
+    <section
+        class="avatar"
         style="background: url(https://source.unsplash.com/collection/9540099/500x500) no-repeat center center / cover">
     </section>
     <section class="details">
@@ -41,6 +41,14 @@
 
     </section>
 </div>
+
+<footer>
+    <div class="links">
+      {% for links in about.link %}
+          <a href="{{ links.url }}" target="_blank">{{ links.name  }}</a>
+      {% endfor %}
+    </div>
+  </footer>
 
 {% endblock content %}
 

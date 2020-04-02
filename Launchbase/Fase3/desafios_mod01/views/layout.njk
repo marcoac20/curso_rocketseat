@@ -1,36 +1,29 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
+  <head>
 
-        {% block head %}
-            <title>Marco Antunes</title>
-        {% endblock %}
+      {% block head %}
+          <title>Marco Antunes</title>
+      {% endblock %}
 
-        <link rel="stylesheet" href="/styles.css">
-    </head>
+      <link rel="stylesheet" href="/styles.css">
+  </head>
 
-    <body>
-        <header>
-            <div class="links">
-                <a href="/">Sobre</a>
-                <a href="/portfolio">Aulas</a>
-                <a href="/teachers">Teachers</a>
-                <a href="/">Students</a>
-            </div>            
-        </header>
+  <body>
+      <header>
+          <div class="links">
+              <a href="/">Sobre</a>
+              <a href="/portfolio">Aulas</a>
+              <a href="/teachers">Teachers</a>
+              <a href="/">Students</a>
+          </div>
+      </header>
 
-        {% block content %}
-        
-        {% endblock %}
+      {% block content %}
 
-        <footer>
-            <div id="links-footer" class="links">
-                {% for links in about.link %}
-                    <a href="{{ links.url }}" target="_blank">{{ links.name  }}</a>
-                {% endfor %}
-            </div>  
-        </footer>
-    </body>    
+      {% endblock %}
 
-</html> 
+  </body>
+
+</html>

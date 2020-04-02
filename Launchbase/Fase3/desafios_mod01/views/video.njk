@@ -8,29 +8,33 @@
 
 {% block content%}
 
-        <div id="wrapper" class="video">
-            <h1>{{ item.title }}</h1>
-        </div>
+  <div id="wrapper" class="video">
+    <h1>{{ item.title }}</h1>
+  </div>
 
-        <section class= "video">
+  <section class= "video">
+    <div class="card" id="{{item.id}}">
+      <div class="card__video-container">
+        <iframe src="https://www.youtube.com/embed/{{item.id}}" frameborder="0"></iframe>
+      </div>
 
-                <div class="card" id="{{item.id}}">
-                    <div class="card__video-container">
-                        <iframe src="https://www.youtube.com/embed/{{item.id}}" frameborder="0"></iframe>
-                        
-                    </div>
-        
-                    <div class="card__content">
-                        <p>{{item.title}}</p>
-                    </div>
-        
-                    <div class="card__info">
-                        <p>{{item.duretion}}</p>
-                        <p class="card__price">{{item.price}}</p>
-                    </div>
-                </div>
-            
-        </section>
+      <div class="card__content">
+        <p>{{item.title}}</p>
+      </div>
 
-        
+      <div class="card__info">
+        <p>{{item.duretion}}</p>
+        <p class="card__price">{{item.price}}</p>
+      </div>
+    </div>
+  </section>
+
+  {# <footer>
+    <div class="links_footer">
+      {% for links in about.link %}
+        <a href="{{ links.url }}" target="_blank">{{ links.name  }}</a>
+      {% endfor %}
+    </div>
+  </footer> #}
+
 {% endblock %}

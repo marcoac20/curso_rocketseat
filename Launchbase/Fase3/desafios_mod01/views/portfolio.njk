@@ -11,34 +11,42 @@
 
 {% block content%}
 
-        <div id="wrapper">
-            <h1>Aulas</h1>
+  <div id="wrapper">
+      <h1>Aulas</h1>
+  </div>
+
+  <section class="cards">
+
+    {% for item in itens %}
+      <div class="card" id="{{item.id}}">
+        <div class="card__image-container {{ 'featured-wrapper' if item.featured }}">
+          <img src="https://img.youtube.com/vi/{{item.id}}/0.jpg" alt="Imagem de {{item.title}}">
+          {% if item.featured %}
+            <div class="featured">Featured</div>
+          {% endif %}
         </div>
 
-        <section class="cards">
+        <div class="card__content">
+          <p>{{item.title}}</p>
+        </div>
 
-            {% for item in itens %}
-                <div class="card" id="{{item.id}}">
-                    <div class="card__image-container {{ 'featured-wrapper' if item.featured }}">
-                        <img src="https://img.youtube.com/vi/{{item.id}}/0.jpg" alt="Imagem de {{item.title}}">
-                        {% if item.featured %}
-                            <div class="featured">Featured</div>
-                        {% endif %}
-                    </div>
-        
-                    <div class="card__content">
-                        <p>{{item.title}}</p>
-                    </div>
-        
-                    <div class="card__info">
-                        <p>{{item.duretion}}</p>
-                        <p class="card__price">{{item.price}}</p>
-                    </div>
-                </div>
-            {% endfor %}
-            
-        </section>
+        <div class="card__info">
+          <p>{{item.duretion}}</p>
+          <p class="card__price">{{item.price}}</p>
+        </div>
+      </div>
+    {% endfor %}
 
-        <script src="/scripts.js"></script>
+  </section>
+
+  {# <footer>
+    <div class="links_footer">
+      {% for links in about.link %}
+          <a href="{{ links.url }}" target="_blank">{{ links.name  }}</a>
+      {% endfor %}
+    </div>
+  </footer> #}
+
+  <script src="/scripts.js"></script>
 
 {% endblock %}
